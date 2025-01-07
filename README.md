@@ -4,8 +4,8 @@
 
 # git clone https://github.com/vaibhav540/Red-White.git
 
-# cd Red-White 
+*# cd Red-White 
 
-# npm i
+*# npm i
 
-# npm run dev
+*# npm run dev
