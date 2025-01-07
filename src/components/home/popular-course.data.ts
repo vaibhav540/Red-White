@@ -4,7 +4,7 @@ export const data: Array<Course> = [
   {
     id: 1,
     cover: '/images/courses/a9e7b27a0c5e986a22416d79e2e9dba9.jpg',
-    title: 'Android Development from Zeo to Hero',
+    title: 'Computer Graphics',
     rating: 5,
     ratingCount: 8,
     price: 25,
@@ -13,7 +13,7 @@ export const data: Array<Course> = [
   {
     id: 2,
     cover: '/images/courses/alvaro-reyes-qWwpHwip31M-unsplash.jpg',
-    title: 'UI/UX Complete Guide',
+    title: 'Data Analytics',
     rating: 5,
     ratingCount: 15,
     price: 20,
@@ -22,7 +22,7 @@ export const data: Array<Course> = [
   {
     id: 3,
     cover: '/images/courses/christopher-gower-m_HRfLhgABo-unsplash.jpg',
-    title: 'Mastering Data Modeling Fundamentals',
+    title: 'Data Structure & Algorithm',
     rating: 4,
     ratingCount: 7,
     price: 30,
@@ -31,7 +31,7 @@ export const data: Array<Course> = [
   {
     id: 4,
     cover: '/images/courses/true-agency-o4UhdLv5jbQ-unsplash.jpg',
-    title: 'The Complete Guide Docker and Kubernetes',
+    title: 'Ethical Hacking Bootcamp Zero to Mastery',
     rating: 4,
     ratingCount: 12,
     price: 30,
@@ -40,7 +40,7 @@ export const data: Array<Course> = [
   {
     id: 5,
     cover: '/images/courses/stillness-inmotion-Jh6aQX-25Uo-unsplash.jpg',
-    title: 'Modern React with MUI & Redux',
+    title: 'FullStack Web Development',
     rating: 4,
     ratingCount: 32,
     price: 35,
@@ -49,7 +49,7 @@ export const data: Array<Course> = [
   {
     id: 6,
     cover: '/images/courses/stillness-inmotion-YSCCnRGrD-4-unsplash.jpg',
-    title: 'Ethical Hacking Bootcamp Zero to Mastery',
+    title: 'System analytics/AWS',
     rating: 5,
     ratingCount: 14,
     price: 35,

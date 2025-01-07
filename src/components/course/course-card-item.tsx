@@ -1,24 +1,26 @@
-import React, { FC } from 'react'
-import Image from 'next/image'
-import Box from '@mui/material/Box'
-import Rating from '@mui/material/Rating'
-import Typography from '@mui/material/Typography'
-import IconButton, { iconButtonClasses } from '@mui/material/IconButton'
-import ArrowForward from '@mui/icons-material/ArrowForward'
-import { Course } from '@/interfaces/course'
+import React, { FC } from 'react';
+import Image from 'next/image';
+import Box from '@mui/material/Box';
+import Rating from '@mui/material/Rating';
+import Typography from '@mui/material/Typography';
+import IconButton, { iconButtonClasses } from '@mui/material/IconButton';
+import ArrowForward from '@mui/icons-material/ArrowForward';
+import { Course } from '@/interfaces/course';
+import { useRouter } from 'next/router'; 
 
 interface Props {
-  item: Course
+  item: Course;
 }
 
 const CourseCardItem: FC<Props> = ({ item }) => {
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push(`/coursedetails/${item.id}`); 
+  };
+
   return (
-    <Box
-      sx={{
-        px: 1,
-        py: 4,
-      }}
-    >
+    <Box sx={{ px: 1, py: 4 }}>
       <Box
         sx={{
           p: 2,
@@ -35,18 +37,15 @@ const CourseCardItem: FC<Props> = ({ item }) => {
           },
         }}
       >
-        <Box
-          sx={{
-            lineHeight: 0,
-            overflow: 'hidden',
-            borderRadius: 3,
-            mb: 2,
-          }}
-        >
+        <Box sx={{ lineHeight: 0, overflow: 'hidden', borderRadius: 3, mb: 2 }}>
           <Image src={item.cover} width={760} height={760} alt={'Course ' + item.id} />
         </Box>
         <Box sx={{ mb: 2 }}>
-          <Typography component="h2" variant="h5" sx={{ mb: 2, height: 56, overflow: 'hidden', fontSize: '1.2rem' }}>
+          <Typography
+            component="h2"
+            variant="h5"
+            sx={{ mb: 2, height: 56, overflow: 'hidden', fontSize: '1.2rem' }}
+          >
             {item.title}
           </Typography>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -66,13 +65,14 @@ const CourseCardItem: FC<Props> = ({ item }) => {
           <IconButton
             color="primary"
             sx={{ '&:hover': { backgroundColor: 'primary.main', color: 'primary.contrastText' } }}
+            onClick={handleClick} 
           >
             <ArrowForward />
           </IconButton>
         </Box>
       </Box>
     </Box>
-  )
-}
+  );
+};
 
-export default CourseCardItem
+export default CourseCardItem;
